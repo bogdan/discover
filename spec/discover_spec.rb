@@ -2,10 +2,6 @@ require 'spec_helper'
 
 describe 'Discover' do
 
-  def build_group name
-    Group.create!(:name => name)
-  end
-
   let(:named_scope) { Group.by_char('j') }
 
   let(:java)   { build_group 'java'   }
@@ -45,7 +41,7 @@ describe 'Discover' do
       end
 
       it 'should render error message correctly' do
-        subject.failure_message_for_should.should == 'expected #{named_scope.inspect} to be ordered as: #{[jruby.id, java.id].inspect}, but it was not. '
+        subject.failure_message_for_should.should == "expected #{named_scope.inspect} to be ordered as: #{[jruby.id, java.id].inspect}, but it was not. "
       end
     end
   end
@@ -65,6 +61,4 @@ describe 'Discover' do
     it { should_not discover(ruby, python) }
 
   end
-
-
 end
