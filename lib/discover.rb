@@ -55,7 +55,7 @@ module Rspec
       return valid_not_findness?
     end
 
-    def failure_message_for_should
+    def failure_message
       result = @not_found_object_ids.any? ?
         "expected #{@scope.inspect} to include objects: #{@not_found_object_ids.inspect}" :
         "expected #{@scope.inspect} to be ordered as: #{@objects.map(&:id).inspect}"
@@ -66,12 +66,16 @@ module Rspec
       result
     end
 
-    def failure_message_for_should_not
+    def failure_message_when_negated
       result = "expected #{@scope.inspect} to not include objects: #{@found_object_ids.inspect}"
       result += ', but it was. '
       result += found_objects_string
       result
     end
+
+    # RSpec 2 compatibility:
+    alias_method :failure_message_for_should, :failure_message
+    alias_method :failure_message_for_should_not, :failure_message_when_negated
 
 
     def description
