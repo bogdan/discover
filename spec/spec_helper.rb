@@ -7,7 +7,7 @@ $LOAD_PATH << '.'
 require 'lib/discover'
 
 ActiveRecord::Base.establish_connection(:adapter => 'sqlite3', :database => ':memory:')
-ActiveRecord::Base.configurations = true
+#ActiveRecord::Base.configurations = true
 
 File.open('spec.log', 'w').close
 ActiveRecord::Base.logger = Logger.new('spec.log')
