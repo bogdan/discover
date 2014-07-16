@@ -1,5 +1,5 @@
-require 'bundler/gem_tasks'
-  require 'jeweler'
+require 'bundler'
+require 'jeweler'
 
-  Jeweler::Tasks.new
-  Jeweler::RubygemsDotOrgTasks.new 
+Jeweler::Tasks.new
+Jeweler::RubygemsDotOrgTasks.new 
