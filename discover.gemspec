@@ -26,7 +26,6 @@ Gem::Specification.new do |gem|
       gem.add_development_dependency(%q<activerecord>, ['>= 3.0.0'])
       gem.add_development_dependency(%q<rspec-rails>, ['>= 2.0.0'])
       gem.add_development_dependency(%q<sqlite3-ruby>, ['>= 0'])
-      gem.add_development_dependency(%q<jeweler>, ['>= 0'])
       gem.add_development_dependency(%q<byebug>, ['>= 0'])
     else
       gem.add_dependency(%q<activemodel>, ['>= 3.0.0'])
