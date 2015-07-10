@@ -5,12 +5,13 @@
 # stub:  0.1.1 ruby lib
 
 Gem::Specification.new do |s|
-  s.name = nil
+  s.name = ''
   s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.date = "2014-07-16"
+  s.authors = ['Bogdan Gusiev']
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -59,4 +60,3 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<byebug>, [">= 0"])
   end
 end
-
