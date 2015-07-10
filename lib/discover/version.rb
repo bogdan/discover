@@ -1,3 +1,3 @@
-module Discover
-  VERSION = '0.0.1'
+class Discover
+  VERSION = "0.1.2"
 end
